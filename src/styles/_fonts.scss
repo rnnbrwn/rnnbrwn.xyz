@@ -1,0 +1,17 @@
+// Geomanist Font Face
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('/assets/fonts/Geomanist-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('/assets/fonts/Geomanist-Ultra.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
