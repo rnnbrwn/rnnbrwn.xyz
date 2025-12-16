@@ -1,1 +1,3 @@
+echo "🧪 Running tests on staged files..."
 npx lint-staged
+echo "✅ All tests passed! Proceeding with commit."
