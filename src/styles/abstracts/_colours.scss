@@ -1,0 +1,22 @@
+@use 'sass:color';
+
+// Color System
+// Usage: background-color: $color-primary; or color: $color-text;
+
+// Brand Colors
+$color-primary: #fece00; // Yellow
+$color-secondary: #e50053; // Pink/Red
+
+// Base Colors
+$color-black: #1b2021; // Dark base
+$color-white: #fffcff; // Light base
+
+// Semantic Colors (using brand colors)
+$color-background: $color-primary;
+$color-text: $color-secondary;
+$color-text-inverse: $color-white;
+
+// Component Colors
+$color-link: $color-secondary;
+$color-link-hover: color.adjust($color-secondary, $lightness: -10%);
+$color-border: $color-black;

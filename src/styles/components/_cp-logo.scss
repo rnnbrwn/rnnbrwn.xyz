@@ -2,7 +2,27 @@
 // Description: Logo component for the site.
 // Styles: /src/styles/components/cp-logo.scss
 
+@use '../abstracts/mq' as *;
+@use '../abstracts/sizes' as *;
+
 .cp-logo {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+
+	@include mq(tablet) {
+		justify-content: flex-start;
+	}
+}
+
+.cp-hamburger {
+	& .cp-logo {
+		order: 2;
+		padding: $size-2;
+		flex: 1;
+
+		@include mq(tablet) {
+			order: 1;
+		}
+	}
 }

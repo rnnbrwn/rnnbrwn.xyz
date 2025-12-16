@@ -1,5 +1,8 @@
+@use 'abstracts/mq';
 @use 'base/reset';
 @use 'base/fonts';
+@use 'base/body';
+@use 'base/typography';
 @use 'components/lander';
 @use 'components/cp-navigation-bar';
 @use 'components/cp-nav';

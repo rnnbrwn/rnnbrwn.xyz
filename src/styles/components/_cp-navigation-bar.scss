@@ -1,24 +1,33 @@
+@use '../abstracts/sizes' as *;
+@use '../abstracts/mq' as *;
+@use '../abstracts/colours' as *;
+
 .cp-navigation-bar {
+	background-color: $color-primary;
 	display: flex;
-	background-color: silver;
+	border-bottom: $size-0 solid navy;
 	flex-wrap: wrap;
 	position: relative;
 
 	// Hamburger button
-	.hamburger {
+	.cp-hamburger {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 2rem;
-		height: 2rem;
+		width: $size-5;
+		height: $size-5;
 		background: transparent;
 		border: none;
 		cursor: pointer;
 		padding: 0;
 		z-index: 10;
 		order: 1;
-		margin: 1em;
+		margin: $size-2;
 		position: relative;
+
+		@include mq(tablet) {
+			display: none;
+		}
 
 		img {
 			width: 100%;
@@ -42,8 +51,12 @@
 
 	.cp-logo {
 		order: 2;
-		padding: 1em;
+		padding: $size-2;
 		flex: 1;
+
+		@include mq(tablet) {
+			order: 1;
+		}
 	}
 
 	.cp-nav {
@@ -53,6 +66,15 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.3s ease;
+
+		@include mq(tablet) {
+			order: 2;
+			width: auto;
+			flex: 1;
+			max-height: none;
+			overflow: visible;
+			padding: $size-2;
+		}
 
 		&.active {
 			max-height: 500px;
@@ -65,25 +87,5 @@
 
 	a:hover {
 		text-decoration: underline;
-	}
-
-	// Desktop styles
-	@media (min-width: 768px) {
-		.hamburger {
-			display: none;
-		}
-
-		.cp-logo {
-			order: 1;
-		}
-
-		.cp-nav {
-			order: 2;
-			width: auto;
-			flex: 1;
-			max-height: none;
-			overflow: visible;
-			padding: 1em;
-		}
 	}
 }
