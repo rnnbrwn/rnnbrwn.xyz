@@ -1,0 +1,89 @@
+.cp-navigation-bar {
+	display: flex;
+	background-color: silver;
+	flex-wrap: wrap;
+	position: relative;
+
+	// Hamburger button
+	.hamburger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		z-index: 10;
+		order: 1;
+		margin: 1em;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: opacity 0.3s ease;
+		}
+
+		.icon-close {
+			opacity: 0;
+		}
+
+		&.active .icon-hamburger {
+			opacity: 0;
+		}
+
+		&.active .icon-close {
+			opacity: 1;
+		}
+	}
+
+	.cp-logo {
+		order: 2;
+		padding: 1em;
+		flex: 1;
+	}
+
+	.cp-nav {
+		order: 3;
+		width: 100%;
+		padding: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+
+		&.active {
+			max-height: 500px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	// Desktop styles
+	@media (min-width: 768px) {
+		.hamburger {
+			display: none;
+		}
+
+		.cp-logo {
+			order: 1;
+		}
+
+		.cp-nav {
+			order: 2;
+			width: auto;
+			flex: 1;
+			max-height: none;
+			overflow: visible;
+			padding: 1em;
+		}
+	}
+}

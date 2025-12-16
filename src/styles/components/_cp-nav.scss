@@ -1,0 +1,35 @@
+// Component: cp-nav
+// Description: Navigation component for the site.
+// Styles: /src/styles/components/cp-nav.scss
+
+.cp-nav {
+	display: flex;
+	align-items: center;
+
+	& ul {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 1em;
+		width: 100%;
+
+		& li {
+			list-style-type: none;
+			margin-right: 0;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	// Desktop styles
+	@media (min-width: 768px) {
+		& ul {
+			flex-direction: row;
+			padding: 0;
+
+			& li {
+				margin-right: 1em;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
