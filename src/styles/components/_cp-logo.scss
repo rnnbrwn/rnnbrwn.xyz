@@ -15,14 +15,4 @@
 	}
 }
 
-.cp-hamburger {
-	& .cp-logo {
-		order: 2;
-		padding: $size-2;
-		flex: 1;
 
-		@include mq(tablet) {
-			order: 1;
-		}
-	}
-}

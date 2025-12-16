@@ -19,6 +19,7 @@
 		@include mq(tablet) {
 			flex-direction: row;
 			padding: 0;
+			justify-content: flex-end;
 		}
 
 		& li {

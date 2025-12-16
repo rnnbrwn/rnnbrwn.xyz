@@ -1,12 +1,19 @@
 @use 'sass:map';
 
+$mobile-sm: 375px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-lg: 1280px;
+$desktop-xl: 1920px;
+
 $breakpoints: (
-	'mobile-sm': 375px,
-	'mobile': 480px,
-	'tablet': 768px,
-	'desktop': 1024px,
-	'desktop-lg': 1280px,
-	'desktop-xl': 1920px,
+	'mobile-sm': $mobile-sm,
+	'mobile': $mobile,
+	'tablet': $tablet,
+	'desktop': $desktop,
+	'desktop-lg': $desktop-lg,
+	'desktop-xl': $desktop-xl,
 );
 
 @mixin mq($breakpoint) {

@@ -4,13 +4,15 @@
 
 .cp-navigation-bar {
 	background-color: $color-primary;
-	display: flex;
 	border-bottom: $size-0 solid navy;
-	flex-wrap: wrap;
-	position: relative;
 
-	// Hamburger button
-	.cp-hamburger {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+
+		// Hamburger button
+		.cp-hamburger {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -49,17 +51,17 @@
 		}
 	}
 
-	.cp-logo {
-		order: 2;
-		padding: $size-2;
-		flex: 1;
+		.cp-logo {
+			order: 2;
+			padding: $size-2;
+			flex: 1;
 
-		@include mq(tablet) {
-			order: 1;
+			@include mq(tablet) {
+				order: 1;
+			}
 		}
-	}
 
-	.cp-nav {
+		.cp-nav {
 		order: 3;
 		width: 100%;
 		padding: 0;
@@ -81,11 +83,12 @@
 		}
 	}
 
-	a {
-		text-decoration: none;
-	}
+		a {
+			text-decoration: none;
+		}
 
-	a:hover {
-		text-decoration: underline;
+		a:hover {
+			text-decoration: underline;
+		}
 	}
 }
