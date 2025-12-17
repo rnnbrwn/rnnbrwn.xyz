@@ -12,8 +12,7 @@ export function initHamburgerMenu() {
 		nav.classList.toggle('active');
 
 		// Update aria-expanded for accessibility
-		const isExpanded =
-			hamburger.getAttribute('aria-expanded') === 'true';
+		const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
 		hamburger.setAttribute('aria-expanded', !isExpanded);
 	};
 
