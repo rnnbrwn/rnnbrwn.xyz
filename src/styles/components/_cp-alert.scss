@@ -1,0 +1,17 @@
+// Component: cp-alert
+// Description: Logo component for the site.
+// Styles: /src/styles/components/cp-alert.scss
+
+@use '../abstracts/mq' as *;
+@use '../abstracts/sizes' as *;
+@use '../abstracts/colours' as *;
+
+.cp-alert {
+	padding: $size-2;
+	background-color: $color-secondary;
+	color: $color-white;
+	text-align: center;
+
+	@include mq(tablet) {
+	}
+}
