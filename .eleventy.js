@@ -1,8 +1,8 @@
-const sass = require('sass');
-const path = require('path');
-const fs = require('fs');
+import * as sass from 'sass';
+import path from 'path';
+import fs from 'fs';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	// Compile SCSS to CSS
 	eleventyConfig.on('eleventy.before', async () => {
 		const result = sass.compile('src/styles/main.scss');
@@ -27,4 +27,4 @@ module.exports = function (eleventyConfig) {
 		htmlTemplateEngine: 'njk',
 		markdownTemplateEngine: 'njk',
 	};
-};
+}
